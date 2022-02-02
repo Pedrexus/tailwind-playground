@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-USE">
+
+<head>
+    <meta charSet="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="note" content="environment=development" />
+    <meta name="theme-color" content="#edf2f7" />
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>Tailwind Playground</title>
+</head>
+
+<body>
+    <h1 class="flex justify-center py-6">phvv.me</h1>
+    <div class="px-4 grid gap-2 usm:grid-cols-2 md:grid-cols-3" id="grid">
+        <article class="mb-4 max-w-xl" id="card">
+            <button class="block rounded-lg overflow-hidden shadow-md hover:shadow-lg active:shadow-outline">
+                <!-- <img class="w-full" src="../images/blue-mountains-original.jpg" loading="lazy" /> -->
+            </button>
+            <time class="pl-1 uppercase text-xs text-gray-700 tracking-wider">March 11, 2020</time>
+            <div class="p-1" id="content">
+                <button class="text-gray-900 hover:text-blue-600 focus:text-blue-700 active:text-blue-700">
+                    <h2 class="pb-5 text-3xl tracking-wide text-left leading-none">
+                        A new way to measure Earth's gravity
+                    </h2>
+                </button>
+                <p class="text-lg tracking-wide leading-tight md:leading-normal text-gray-800">
+                    A tutorial explaining how to measure measure Earth's gravity
+                    acceleration value with only paper and pencil. We won't use any
+                    advanced mathematics, so you needn't worry about that.
+                </p>
+            </div>
+        </article>
+    </div>
+</body>
+
+<script>
+    // duplicates element
+    var original = document.getElementById('card');
+
+    for (let i = 0; i < 3; i++) {
+        var clone = original.cloneNode(true); // "deep" clone
+        original.parentNode.insertBefore(clone, original.nextSibling);
+    }
+
+</script>
+
+</html>
